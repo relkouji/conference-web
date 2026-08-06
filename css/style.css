@@ -1,3 +1,5 @@
+:root 
+
 .container {
     display: flex;
     justify-content: space-between;
@@ -11,4 +13,11 @@
     display: flex;
     list-style: none;
     gap: 20px;
+    font-family: arial;
+    font-size: 15px;
+}
+
+.logo img{
+  width: 100px;
+  height: auto;
 }
