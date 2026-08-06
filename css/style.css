@@ -15,29 +15,48 @@
 nav {
     background: #fff;
     box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 }
 
 .nav-container {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    height: 80px;
+    height: 110px; /* Dinaikkan agar muat untuk logo yang lebih besar */
+}
+
+.nav-brand {
+    display: flex;
+    align-items: center;
+    gap: 20px;
 }
 
 .logo img {
-    height: 50px;
+    height: 60px; /* Ukuran logo Mercu Buana disesuaikan */
     width: auto;
+    display: block;
 }
 
-.grace {
-    height: 50 px;
+.nav-divider {
+    width: 1px;
+    height: 45px;
+    background-color: #ddd;
+}
+
+/* Logo GRACE diperbesar secara drastis tingginya agar jelas */
+.grace img {
+    height: 75px; 
     width: auto;
-    }
+    display: block;
+}
 
 .nav-menu {
     display: flex;
     list-style: none;
-    gap: 30px;
+    gap: 25px;
+    align-items: center;
 }
 
 .nav-menu a {
@@ -52,39 +71,44 @@ nav {
     background: linear-gradient(135deg, #0a1e5c, #16308c);
     overflow: hidden;
     position: relative;
+    padding: 60px 0;
 }
 
 .hero-container {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    min-height: 600px;
+    min-height: 500px;
     position: relative;
     z-index: 2;
+    gap: 40px;
 }
 
 .hero-text {
-    max-width: 550px;
+    max-width: 600px;
     color: #fff;
 }
 
-.hero-text h {
-    font-size: 48px;
+/* Memperbaiki warna teks agar terlihat jelas */
+.hero-text h2 {
+    font-size: 36px;
     font-weight: 800;
     line-height: 1.2;
     margin-bottom: 20px;
+    color: #ffffff !important;
 }
 
 .hero-text p {
     font-size: 16px;
     line-height: 1.6;
     margin-bottom: 30px;
-    opacity: 0.9;
+    color: #f0f0f0;
 }
 
 .hero-buttons {
     display: flex;
     gap: 15px;
+    flex-wrap: wrap;
 }
 
 .btn {
@@ -107,27 +131,34 @@ nav {
     border: 2px solid #fff;
 }
 
+/* Memperbaiki ukuran gambar hero */
 .hero-image {
-    max-width: 950px;
+    max-width: 400px;
+    flex-shrink: 0;
 }
 
 .hero-image img {
-    width: 150px;
+    width: 100%;
+    max-width: 350px;
     height: auto;
     display: block;
+    border-radius: 8px;
 }
 
 @media (max-width: 900px) {
     .hero-container {
         flex-direction: column;
         text-align: center;
-        padding-top: 40px;
+        padding-top: 20px;
     }
     .nav-menu {
         display: none;
     }
     .hero-image {
-        margin-top: 30px;
+        margin-top: 20px;
+    }
+    .hero-buttons {
+        justify-content: center;
     }
 }
 
@@ -300,83 +331,6 @@ section h2 {
 }
 
 /* FOOTER */
-.site-footer {
-    background: #0a1e5c;
-    color: #fff;
-    padding-top: 50px;
-}
-
-.footer-container {
-    display: grid;
-    grid-template-columns: 2fr 1fr 1.5fr 1fr;
-    gap: 30px;
-    padding-bottom: 40px;
-}
-
-.footer-logo {
-    height: 40px;
-    margin-bottom: 15px;
-    background: #fff;
-    border-radius: 4px;
-    padding: 4px;
-}
-
-.footer-col h4 {
-    margin-bottom: 15px;
-    font-size: 16px;
-}
-
-.footer-col p {
-    font-size: 14px;
-    line-height: 1.6;
-    opacity: 0.85;
-    margin-bottom: 8px;
-}
-
-.footer-col ul {
-    list-style: none;
-}
-
-.footer-col ul li {
-    margin-bottom: 8px;
-}
-
-.footer-col a {
-    color: #fff;
-    text-decoration: none;
-    font-size: 14px;
-    opacity: 0.85;
-}
-
-.footer-col a:hover {
-    opacity: 1;
-    text-decoration: underline;
-}
-
-.footer-btn {
-    display: inline-block;
-    margin-top: 5px;
-}
-
-.footer-bottom {
-    border-top: 1px solid rgba(255,255,255,0.15);
-    text-align: center;
-    padding: 18px 0;
-    font-size: 13px;
-    opacity: 0.7;
-}
-
-@media (max-width: 900px) {
-    .footer-container {
-        grid-template-columns: 1fr 1fr;
-    }
-}
-
-@media (max-width: 550px) {
-    .footer-container {
-        grid-template-columns: 1fr;
-    }
-}/* FOOTER */
 .site-footer {
     background: #0a1e5c;
     color: #fff;
