@@ -189,3 +189,263 @@ section h2 {
         flex-direction: column;
     }
 }
+
+/* ABOUT - GRACE */
+.conference-full-name {
+    font-weight: 600;
+    color: #0a1e5c;
+    margin-bottom: 15px;
+}
+
+.theme-text {
+    color: #555;
+    margin-bottom: 10px;
+}
+
+.theme-highlight {
+    max-width: 750px;
+    margin: 0 auto;
+    font-style: italic;
+    font-weight: 700;
+    color: #ff6b5e;
+    font-size: 18px;
+}
+
+/* SUBTHEMES */
+.subtheme-grid {
+    list-style: none;
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: left;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+}
+
+.subtheme-grid li {
+    background: #f4f6fb;
+    padding: 12px 16px;
+    border-left: 4px solid #ff6b5e;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+/* REGISTRATION FEE CARDS */
+.fee-grid {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+.fee-card {
+    background: #fff;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    padding: 25px 35px;
+    min-width: 180px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+.fee-card h3 {
+    color: #0a1e5c;
+    margin-bottom: 10px;
+}
+
+.fee-card p {
+    font-weight: 700;
+    color: #ff6b5e;
+}
+
+/* PAYMENT */
+.payment {
+    background: #f4f6fb;
+}
+
+.payment-detail {
+    color: #333;
+    margin-bottom: 6px;
+}
+
+/* CONTACT */
+.contact-grid {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    margin-top: 25px;
+    flex-wrap: wrap;
+}
+
+.contact-card {
+    background: #fff;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    padding: 20px 30px;
+}
+
+.contact-card h3 {
+    color: #0a1e5c;
+    margin-bottom: 5px;
+}
+
+@media (max-width: 700px) {
+    .subtheme-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* FOOTER */
+.site-footer {
+    background: #0a1e5c;
+    color: #fff;
+    padding-top: 50px;
+}
+
+.footer-container {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1.5fr 1fr;
+    gap: 30px;
+    padding-bottom: 40px;
+}
+
+.footer-logo {
+    height: 40px;
+    margin-bottom: 15px;
+    background: #fff;
+    border-radius: 4px;
+    padding: 4px;
+}
+
+.footer-col h4 {
+    margin-bottom: 15px;
+    font-size: 16px;
+}
+
+.footer-col p {
+    font-size: 14px;
+    line-height: 1.6;
+    opacity: 0.85;
+    margin-bottom: 8px;
+}
+
+.footer-col ul {
+    list-style: none;
+}
+
+.footer-col ul li {
+    margin-bottom: 8px;
+}
+
+.footer-col a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 14px;
+    opacity: 0.85;
+}
+
+.footer-col a:hover {
+    opacity: 1;
+    text-decoration: underline;
+}
+
+.footer-btn {
+    display: inline-block;
+    margin-top: 5px;
+}
+
+.footer-bottom {
+    border-top: 1px solid rgba(255,255,255,0.15);
+    text-align: center;
+    padding: 18px 0;
+    font-size: 13px;
+    opacity: 0.7;
+}
+
+@media (max-width: 900px) {
+    .footer-container {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 550px) {
+    .footer-container {
+        grid-template-columns: 1fr;
+    }
+}/* FOOTER */
+.site-footer {
+    background: #0a1e5c;
+    color: #fff;
+    padding-top: 50px;
+}
+
+.footer-container {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1.5fr 1fr;
+    gap: 30px;
+    padding-bottom: 40px;
+}
+
+.footer-logo {
+    height: 40px;
+    margin-bottom: 15px;
+    background: #fff;
+    border-radius: 4px;
+    padding: 4px;
+}
+
+.footer-col h4 {
+    margin-bottom: 15px;
+    font-size: 16px;
+}
+
+.footer-col p {
+    font-size: 14px;
+    line-height: 1.6;
+    opacity: 0.85;
+    margin-bottom: 8px;
+}
+
+.footer-col ul {
+    list-style: none;
+}
+
+.footer-col ul li {
+    margin-bottom: 8px;
+}
+
+.footer-col a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 14px;
+    opacity: 0.85;
+}
+
+.footer-col a:hover {
+    opacity: 1;
+    text-decoration: underline;
+}
+
+.footer-btn {
+    display: inline-block;
+    margin-top: 5px;
+}
+
+.footer-bottom {
+    border-top: 1px solid rgba(255,255,255,0.15);
+    text-align: center;
+    padding: 18px 0;
+    font-size: 13px;
+    opacity: 0.7;
+}
+
+@media (max-width: 900px) {
+    .footer-container {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 550px) {
+    .footer-container {
+        grid-template-columns: 1fr;
+    }
+}
