@@ -25,9 +25,14 @@ nav {
 }
 
 .logo img {
-    height: 100px;
+    height: 50px;
     width: auto;
 }
+
+.grace {
+    height: 50 px;
+    width: auto;
+    }
 
 .nav-menu {
     display: flex;
@@ -63,7 +68,7 @@ nav {
     color: #fff;
 }
 
-.hero-text h1 {
+.hero-text h {
     font-size: 48px;
     font-weight: 800;
     line-height: 1.2;
@@ -103,11 +108,11 @@ nav {
 }
 
 .hero-image {
-    max-width: 450px;
+    max-width: 950px;
 }
 
 .hero-image img {
-    width: 100%;
+    width: 150px;
     height: auto;
     display: block;
 }
