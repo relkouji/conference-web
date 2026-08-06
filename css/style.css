@@ -1,23 +1,191 @@
-:root 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
 
 .container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 20px;
 }
 
+/* NAVBAR */
+nav {
+    background: #fff;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.nav-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 80px;
+}
+
+.logo img {
+    height: 100px;
+    width: auto;
+}
+
 .nav-menu {
     display: flex;
     list-style: none;
-    gap: 20px;
-    font-family: arial;
-    font-size: 15px;
+    gap: 30px;
 }
 
-.logo img{
-  width: 100px;
-  height: auto;
+.nav-menu a {
+    text-decoration: none;
+    color: #1a1a2e;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+/* HERO */
+.hero {
+    background: linear-gradient(135deg, #0a1e5c, #16308c);
+    overflow: hidden;
+    position: relative;
+}
+
+.hero-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 600px;
+    position: relative;
+    z-index: 2;
+}
+
+.hero-text {
+    max-width: 550px;
+    color: #fff;
+}
+
+.hero-text h1 {
+    font-size: 48px;
+    font-weight: 800;
+    line-height: 1.2;
+    margin-bottom: 20px;
+}
+
+.hero-text p {
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 30px;
+    opacity: 0.9;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 15px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 14px 24px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 14px;
+}
+
+.btn-primary {
+    background: #ff6b5e;
+    color: #fff;
+}
+
+.btn-secondary {
+    background: #fff;
+    color: #0a1e5c;
+    border: 2px solid #fff;
+}
+
+.hero-image {
+    max-width: 450px;
+}
+
+.hero-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+@media (max-width: 900px) {
+    .hero-container {
+        flex-direction: column;
+        text-align: center;
+        padding-top: 40px;
+    }
+    .nav-menu {
+        display: none;
+    }
+    .hero-image {
+        margin-top: 30px;
+    }
+}
+
+/* SECTIONS UMUM */
+section {
+    padding: 60px 0;
+    text-align: center;
+}
+
+section h2 {
+    font-size: 28px;
+    margin-bottom: 25px;
+    color: #0a1e5c;
+}
+
+/* ABOUT */
+.about-grid {
+    display: flex;
+    gap: 40px;
+    text-align: left;
+}
+
+.about-grid p {
+    flex: 1;
+    line-height: 1.7;
+    color: #333;
+}
+
+/* INFO BOX (Important Dates & Registration Fee) */
+.info-box {
+    background: #f4f6fb;
+}
+
+.info-box.alt {
+    background: #fff;
+}
+
+.info-desc {
+    max-width: 700px;
+    margin: 0 auto 20px;
+    line-height: 1.6;
+    color: #444;
+}
+
+.info-list {
+    list-style: none;
+    max-width: 500px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.info-list li {
+    padding: 10px 0;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+/* BENEFITS */
+.benefits {
+    background: #f4f6fb;
+}
+
+@media (max-width: 900px) {
+    .about-grid {
+        flex-direction: column;
+    }
 }
