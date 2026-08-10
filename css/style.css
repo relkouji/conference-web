@@ -408,3 +408,41 @@ section h2 {
         grid-template-columns: 1fr;
     }
 }
+
+.dropdown {
+    position: relative;
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: #fff;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    border-radius: 6px;
+    min-width: 220px;
+    list-style: none;
+    padding: 8px 0;
+    z-index: 10;
+}
+
+.dropdown-menu li {
+    padding: 0;
+}
+
+.dropdown-menu a {
+    display: block;
+    padding: 10px 16px;
+    font-weight: 400;
+    white-space: nowrap;
+    color: #1a1a2e;
+}
+
+.dropdown-menu a:hover {
+    background: #f4f6fb;
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
