@@ -12,7 +12,11 @@
     padding: 0 20px;
 }
 
-/* NAVBAR */
+
+/* =========================
+   NAVBAR
+========================= */
+
 nav {
     background: #fff;
     box-shadow: 0 2px 8px rgba(0,0,0,0.05);
@@ -67,7 +71,26 @@ nav {
     font-size: 14px;
 }
 
-/* HERO */
+
+/* =========================
+   HAMBURGER
+========================= */
+
+.hamburger {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 30px;
+    color: #0a1e5c;
+    cursor: pointer;
+    padding: 5px;
+}
+
+
+/* =========================
+   HERO
+========================= */
+
 .hero {
     background: linear-gradient(135deg, #0a1e5c, #16308c);
     overflow: hidden;
@@ -171,24 +194,129 @@ nav {
     border-radius: 8px;
 }
 
+
+/* =========================
+   RESPONSIVE TABLET / MOBILE
+========================= */
+
 @media (max-width: 900px) {
+
+    /* HERO */
+
     .hero-container {
         flex-direction: column;
         text-align: center;
         padding-top: 20px;
     }
-    .nav-menu {
-        display: none;
-    }
+
     .hero-image {
         margin-top: 20px;
+        left: 0;
     }
+
     .hero-buttons {
         justify-content: center;
     }
+
+
+    /* =========================
+       NAVBAR MOBILE
+    ========================= */
+
+    .nav-container {
+        height: 90px;
+        position: relative;
+    }
+
+    /* Hamburger muncul */
+    .hamburger {
+        display: block;
+        margin-left: auto;
+    }
+
+    /* Menu disembunyikan */
+    .nav-menu {
+        display: none;
+
+        position: absolute;
+        top: 90px;
+        left: 0;
+
+        width: 100%;
+
+        flex-direction: column;
+        align-items: stretch;
+
+        gap: 0;
+
+        background: #fff;
+
+        padding: 10px 0;
+        margin: 0;
+
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Menu ketika hamburger diklik */
+    .nav-menu.active {
+        display: flex;
+    }
+
+    .nav-menu li {
+        width: 100%;
+        text-align: center;
+    }
+
+    .nav-menu li a {
+        display: block;
+        padding: 12px 20px;
+        font-size: 14px;
+    }
+
+
+    /* =========================
+       LOGO MOBILE
+    ========================= */
+
+    .nav-brand {
+        gap: 10px;
+    }
+
+    .logo img {
+        height: 45px;
+    }
+
+    .grace img {
+        height: 55px;
+    }
+
+
+    /* =========================
+       DROPDOWN MOBILE
+    ========================= */
+
+    .dropdown-menu {
+        position: static;
+        width: 100%;
+        box-shadow: none;
+        border-radius: 0;
+        padding: 0;
+    }
+
+    .dropdown-menu a {
+        padding: 10px 15px;
+    }
+
+    .dropdown:hover .dropdown-menu {
+        display: block;
+    }
 }
 
-/* SECTIONS UMUM */
+
+/* =========================
+   SECTIONS UMUM
+========================= */
+
 section {
     padding: 60px 0;
     text-align: center;
@@ -200,7 +328,11 @@ section h2 {
     color: #E8590C;
 }
 
-/* ABOUT */
+
+/* =========================
+   ABOUT
+========================= */
+
 .about-grid {
     display: flex;
     gap: 40px;
@@ -213,7 +345,11 @@ section h2 {
     color: #333;
 }
 
-/* INFO BOX (Important Dates & Registration Fee) */
+
+/* =========================
+   INFO BOX
+========================= */
+
 .info-box {
     background: #fff8e6;
 }
@@ -241,7 +377,11 @@ section h2 {
     border-bottom: 1px solid #e0e0e0;
 }
 
-/* BENEFITS */
+
+/* =========================
+   BENEFITS
+========================= */
+
 .benefits {
     background: #fff8e6;
 }
@@ -252,7 +392,11 @@ section h2 {
     }
 }
 
-/* ABOUT - GRACE */
+
+/* =========================
+   ABOUT - GRACE
+========================= */
+
 .conference-full-name {
     font-weight: 600;
     color: #E8590C;
@@ -273,7 +417,11 @@ section h2 {
     font-size: 18px;
 }
 
-/* SUBTHEMES */
+
+/* =========================
+   SUBTHEMES
+========================= */
+
 .subtheme-grid {
     list-style: none;
     max-width: 800px;
@@ -292,7 +440,11 @@ section h2 {
     font-size: 14px;
 }
 
-/* REGISTRATION FEE CARDS */
+
+/* =========================
+   REGISTRATION FEE CARDS
+========================= */
+
 .fee-grid {
     display: flex;
     justify-content: center;
@@ -319,7 +471,11 @@ section h2 {
     color: #FF6B35;
 }
 
-/* PAYMENT */
+
+/* =========================
+   PAYMENT
+========================= */
+
 .payment {
     background: #fff8e6;
 }
@@ -329,7 +485,11 @@ section h2 {
     margin-bottom: 6px;
 }
 
-/* CONTACT */
+
+/* =========================
+   CONTACT
+========================= */
+
 .contact-grid {
     display: flex;
     justify-content: center;
@@ -356,7 +516,11 @@ section h2 {
     }
 }
 
-/* FOOTER */
+
+/* =========================
+   FOOTER
+========================= */
+
 .site-footer {
     background: linear-gradient(135deg, #0a1e5c, #16308c);
     color: #fff;
@@ -456,6 +620,11 @@ section h2 {
     }
 }
 
+
+/* =========================
+   DROPDOWN
+========================= */
+
 .dropdown {
     position: relative;
 }
@@ -494,9 +663,19 @@ section h2 {
     display: block;
 }
 
-/* PAGE HEADER */
+
+/* =========================
+   PAGE HEADER
+========================= */
+
 .page-header {
-    background: linear-gradient(135deg, #B84A0F 0%, #E8590C 40%, #FF8C00 75%, #FFC107 100%);
+    background: linear-gradient(
+        135deg,
+        #B84A0F 0%,
+        #E8590C 40%,
+        #FF8C00 75%,
+        #FFC107 100%
+    );
     color: #fff;
     padding: 70px 0;
     text-align: center;
@@ -546,7 +725,11 @@ section h2 {
     z-index: 2;
 }
 
-/* COMMITTEE SECTION */
+
+/* =========================
+   COMMITTEE SECTION
+========================= */
+
 .committee-section {
     padding: 70px 0;
 }
@@ -598,7 +781,11 @@ section h2 {
     border-left: 4px solid #FFC107;
 }
 
-/* LIST - CARD STYLE */
+
+/* =========================
+   LIST - CARD STYLE
+========================= */
+
 .committee-list {
     list-style: none;
     max-width: 750px;
@@ -642,7 +829,11 @@ section h2 {
     color: #1a1a2e;
 }
 
-/* NUMBERED LIST (Peer Review Process) */
+
+/* =========================
+   NUMBERED LIST
+========================= */
+
 .committee-list.numbered li {
     padding: 22px 24px;
     border-left: 4px solid #E8590C;
