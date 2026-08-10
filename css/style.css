@@ -18,13 +18,14 @@ nav {
     position: sticky;
     top: 0;
     z-index: 1000;
+    border-bottom: 3px solid #FFC107;
 }
 
 .nav-container {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    height: 110px; /* Dinaikkan agar muat untuk logo yang lebih besar */
+    height: 110px;
 }
 
 .nav-brand {
@@ -34,7 +35,7 @@ nav {
 }
 
 .logo img {
-    height: 60px; /* Ukuran logo Mercu Buana disesuaikan */
+    height: 60px;
     width: auto;
     display: block;
 }
@@ -45,9 +46,8 @@ nav {
     background-color: #ddd;
 }
 
-/* Logo GRACE diperbesar secara drastis tingginya agar jelas */
 .grace img {
-    height: 75px; 
+    height: 75px;
     width: auto;
     display: block;
 }
@@ -74,6 +74,30 @@ nav {
     padding: 60px 0;
 }
 
+.hero::before {
+    content: "";
+    position: absolute;
+    bottom: -100px;
+    left: -80px;
+    width: 280px;
+    height: 280px;
+    background: #FFC107;
+    opacity: 0.25;
+    border-radius: 50%;
+}
+
+.hero::after {
+    content: "";
+    position: absolute;
+    bottom: -60px;
+    left: 60px;
+    width: 160px;
+    height: 160px;
+    background: #FF6B35;
+    opacity: 0.3;
+    border-radius: 50%;
+}
+
 .hero-container {
     display: flex;
     align-items: center;
@@ -89,7 +113,6 @@ nav {
     color: #fff;
 }
 
-/* Memperbaiki warna teks agar terlihat jelas */
 .hero-text h2 {
     font-size: 36px;
     font-weight: 800;
@@ -121,19 +144,21 @@ nav {
 }
 
 .btn-primary {
-    background: #ff6b5e;
+    background: #FF6B35;
     color: #fff;
 }
 
 .btn-secondary {
-    background: #fff;
+    background: #FFC107;
     color: #0a1e5c;
-    border: 2px solid #fff;
+    border: 2px solid #FFC107;
 }
 
-/* Memperbaiki ukuran gambar hero */
 .hero-image {
-    max-width: 400px;
+    top: 60px;
+    position: relative;
+    left: -90px;
+    max-width: 500px;
     flex-shrink: 0;
 }
 
@@ -171,7 +196,7 @@ section {
 section h2 {
     font-size: 28px;
     margin-bottom: 25px;
-    color: #0a1e5c;
+    color: #E8590C;
 }
 
 /* ABOUT */
@@ -189,7 +214,7 @@ section h2 {
 
 /* INFO BOX (Important Dates & Registration Fee) */
 .info-box {
-    background: #f4f6fb;
+    background: #fff8e6;
 }
 
 .info-box.alt {
@@ -217,7 +242,7 @@ section h2 {
 
 /* BENEFITS */
 .benefits {
-    background: #f4f6fb;
+    background: #fff8e6;
 }
 
 @media (max-width: 900px) {
@@ -229,7 +254,7 @@ section h2 {
 /* ABOUT - GRACE */
 .conference-full-name {
     font-weight: 600;
-    color: #0a1e5c;
+    color: #E8590C;
     margin-bottom: 15px;
 }
 
@@ -243,7 +268,7 @@ section h2 {
     margin: 0 auto;
     font-style: italic;
     font-weight: 700;
-    color: #ff6b5e;
+    color: #E8590C;
     font-size: 18px;
 }
 
@@ -259,9 +284,9 @@ section h2 {
 }
 
 .subtheme-grid li {
-    background: #f4f6fb;
+    background: #fff8e6;
     padding: 12px 16px;
-    border-left: 4px solid #ff6b5e;
+    border-left: 4px solid #FFC107;
     border-radius: 4px;
     font-size: 14px;
 }
@@ -284,18 +309,18 @@ section h2 {
 }
 
 .fee-card h3 {
-    color: #0a1e5c;
+    color: #E8590C;
     margin-bottom: 10px;
 }
 
 .fee-card p {
     font-weight: 700;
-    color: #ff6b5e;
+    color: #FF6B35;
 }
 
 /* PAYMENT */
 .payment {
-    background: #f4f6fb;
+    background: #fff8e6;
 }
 
 .payment-detail {
@@ -320,7 +345,7 @@ section h2 {
 }
 
 .contact-card h3 {
-    color: #0a1e5c;
+    color: #E8590C;
     margin-bottom: 5px;
 }
 
@@ -332,9 +357,23 @@ section h2 {
 
 /* FOOTER */
 .site-footer {
-    background: #0a1e5c;
+    background: linear-gradient(135deg, #0a1e5c, #16308c);
     color: #fff;
     padding-top: 50px;
+    position: relative;
+    overflow: hidden;
+}
+
+.site-footer::before {
+    content: "";
+    position: absolute;
+    top: -60px;
+    left: -60px;
+    width: 220px;
+    height: 220px;
+    background: #FFC107;
+    opacity: 0.15;
+    border-radius: 50%;
 }
 
 .footer-container {
@@ -342,6 +381,8 @@ section h2 {
     grid-template-columns: 2fr 1fr 1.5fr 1fr;
     gap: 30px;
     padding-bottom: 40px;
+    position: relative;
+    z-index: 2;
 }
 
 .footer-logo {
@@ -355,6 +396,7 @@ section h2 {
 .footer-col h4 {
     margin-bottom: 15px;
     font-size: 16px;
+    color: #fff;
 }
 
 .footer-col p {
@@ -362,6 +404,7 @@ section h2 {
     line-height: 1.6;
     opacity: 0.85;
     margin-bottom: 8px;
+    color: #fff;
 }
 
 .footer-col ul {
@@ -390,11 +433,14 @@ section h2 {
 }
 
 .footer-bottom {
-    border-top: 1px solid rgba(255,255,255,0.15);
+    border-top: 1px solid rgba(255,255,255,0.2);
     text-align: center;
     padding: 18px 0;
     font-size: 13px;
     opacity: 0.7;
+    color: #fff;
+    position: relative;
+    z-index: 2;
 }
 
 @media (max-width: 900px) {
@@ -440,9 +486,169 @@ section h2 {
 }
 
 .dropdown-menu a:hover {
-    background: #f4f6fb;
+    background: #fff8e6;
 }
 
 .dropdown:hover .dropdown-menu {
     display: block;
+}
+
+/* PAGE HEADER */
+.page-header {
+    background: linear-gradient(135deg, #B84A0F 0%, #E8590C 40%, #FF8C00 75%, #FFC107 100%);
+    color: #fff;
+    padding: 70px 0;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.page-header::before {
+    content: "";
+    position: absolute;
+    top: -70px;
+    left: -60px;
+    width: 220px;
+    height: 220px;
+    background: #0a1e5c;
+    opacity: 0.3;
+    border-radius: 50%;
+}
+
+.page-header::after {
+    content: "";
+    position: absolute;
+    bottom: -80px;
+    right: -60px;
+    width: 240px;
+    height: 240px;
+    background: #FFC107;
+    opacity: 0.4;
+    border-radius: 50%;
+}
+
+.page-header h1 {
+    font-size: 38px;
+    font-weight: 800;
+    margin-bottom: 10px;
+    text-shadow: 0 2px 6px rgba(0,0,0,0.15);
+    position: relative;
+    z-index: 2;
+}
+
+.page-header p {
+    opacity: 0.9;
+    font-size: 15px;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    position: relative;
+    z-index: 2;
+}
+
+/* COMMITTEE SECTION */
+.committee-section {
+    padding: 70px 0;
+}
+
+.committee-section.alt {
+    background: #fff8e6;
+}
+
+.committee-section h2 {
+    text-align: center;
+    color: #E8590C;
+    font-size: 26px;
+    font-weight: 800;
+    margin-bottom: 15px;
+    position: relative;
+    padding-bottom: 15px;
+}
+
+.committee-section h2::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 4px;
+    background: #FFC107;
+    border-radius: 2px;
+}
+
+.committee-intro {
+    max-width: 750px;
+    margin: 0 auto 35px;
+    line-height: 1.8;
+    color: #555;
+    text-align: center;
+    font-size: 15px;
+}
+
+.sub-title {
+    color: #E8590C;
+    font-size: 17px;
+    font-weight: 700;
+    margin: 35px 0 18px;
+    max-width: 750px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 14px;
+    border-left: 4px solid #FFC107;
+}
+
+/* LIST - CARD STYLE */
+.committee-list {
+    list-style: none;
+    max-width: 750px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.committee-list li {
+    background: #fff;
+    border: 1px solid #eaeaea;
+    border-radius: 10px;
+    padding: 18px 22px;
+    line-height: 1.6;
+    font-size: 14.5px;
+    color: #444;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.committee-list li:hover {
+    transform: translateX(4px);
+    box-shadow: 0 4px 14px rgba(232,89,12,0.15);
+    border-color: #FFC107;
+}
+
+.member-role {
+    display: inline-block;
+    background: #0a1e5c;
+    color: #fff;
+    font-weight: 700;
+    font-size: 12px;
+    padding: 5px 14px;
+    border-radius: 20px;
+    margin-bottom: 8px;
+}
+
+.member-name {
+    font-weight: 700;
+    color: #1a1a2e;
+}
+
+/* NUMBERED LIST (Peer Review Process) */
+.committee-list.numbered li {
+    padding: 22px 24px;
+    border-left: 4px solid #E8590C;
+    border-radius: 0 10px 10px 0;
+}
+
+.committee-list.numbered .member-role {
+    background: #E8590C;
+    color: #fff;
 }
