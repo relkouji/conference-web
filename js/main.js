@@ -1,4 +1,12 @@
-// Fade-in animasi saat elemen muncul di layar (scroll reveal)
+
+    const hamburger = document.getElementById("hamburger");
+    const navMenu = document.getElementById("navMenu");
+
+    hamburger.addEventListener("click", function () {
+        navMenu.classList.toggle("active");
+    });
+
+
 document.addEventListener("DOMContentLoaded", function () {
     const revealElements = document.querySelectorAll(
         "section, .committee-list li, .fee-card, .contact-card, .subtheme-grid li"
